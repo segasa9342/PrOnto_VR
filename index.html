@@ -361,7 +361,7 @@
                     <div id="page3_2">
                         <h1>I dati che raccogliamo</h1>
                         <p>
-                            <b>Dati che raccogliamo in modo automatico <meta typeOf="pronto:Collecting" alt="Dati personali raccolti automaticamente"/></b>
+                            <span style="color:red;" id="automated_collecting_click" vocab="http://ontolgy/PrOnto/0.1/"><b>Dati che raccogliamo in modo automatico <meta typeOf="pronto:Collecting" alt="Dati personali raccolti automaticamente"/></b></span><a-entity showbutton="target:#AutomatedCollecting"><a class="ico_button" href="javascript:void(0)">+</a></a-entity>
                                 <ul>
                                     <li>Dati concernenti l'account dell'utente e i suoi progressi di gioco, incluso solitamente un ID account interno.</li>
                                     <li>L'indirizzo IP e gli identificatori del dispositivo mobile dell'utente (come l'ID del dispositivo o l'ID pubblicitario).</li>
@@ -618,6 +618,10 @@
                 <a-box plane_component src="assets/processingsubjectcollection.png" position="0 1 -4" id="Collecting" visible="false"
                     animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
                     animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 5000; easing: linear; startEvents: startanim">
+                </a-box>
+                <a-box plane_component src="assets/processingAutomaticCollection.png" position="0 1 -4" id="AutomatedCollecting" visible="false"
+                       animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
+                       animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 5000; easing: linear; startEvents: startanim">
                 </a-box>
                 <a-plane id="infoPlane" height="2" width="2" position="3.2 2.7 -3.476" src="src:#floor" scale="1 1 1" rotation="0 -45 0" visible="false"></a-plane>
             </a-scene>
