@@ -5,13 +5,15 @@ AFRAME.registerComponent('showbutton', {
   init: function () {
     console.log("registered");
     var show=false;
-    var box = document.querySelector('a-box')
     this.el.addEventListener("click",()=>{
+    var origin=this.el.components.showbutton.attrValue.target;
+    console.log(origin)
       if(show){
         var sceneEl = document.querySelector('a-scene');  // Or this.el since we're in a component.
         sceneEl.querySelector('a-box').setAttribute('visible','false');
       }else{
         var sceneEl = document.querySelector('a-scene');  // Or this.el since we're in a component.
+        sceneEl.querySelector('a-box').setAttribute('src','assets/' + origin +'.png');
         sceneEl.querySelector('a-box').emit("startanim")
         sceneEl.querySelector('a-box').setAttribute('visible','true');
       }

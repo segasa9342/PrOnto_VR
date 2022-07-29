@@ -293,7 +293,7 @@
                         <h1>Contattaci</h1>
                         <p>In caso di domande in materia di protezione dei dati o di richieste per la risoluzione di problemi relativi ai propri dati personali, si prega di contattarci primariamente tramite la funzione di assistenza presente in ciascun gioco Supercell, che ci permetterà di rispondere più velocemente. In alternativa, è possibile contattare:
                             Denominazione del titolare del trattamento:
-                        <span style="color:red;" id="controller_click" vocab="http://ontolgy/PrOnto/0.1/" typeof="pronto:Controller"> Supercell Oy</span><a-entity showbutton="target:#DataController"><a class="ico_button" href="javascript:void(0)">+</a></a-entity>
+                        <span style="color:red;" id="controller_click" vocab="http://ontolgy/PrOnto/0.1/" typeof="pronto:Controller"> Supercell Oy</span><a-entity showbutton="target:controller"><a class="ico_button" href="javascript:void(0)">+</a></a-entity>
                             Indirizzo: Jätkäsaarenlaituri 1, FI-00180 Helsinki, Finlandia
                             all'attenzione di: Privacy E-mail: legal-requests@supercell.com
                         </p>
@@ -306,7 +306,7 @@
                     <div id="page3_1">
                         <h1>I dati che raccogliamo</h1>
                         <p>Le categorie di dati personali che raccogliamo dipendono dai Servizi usati dall'utente e dai requisiti prescritti dalla legge applicabile.</p>
-                        <span style="color:red;" id="collecting_click" vocab="http://ontolgy/PrOnto/0.1/"><b>Dati fornitici direttamente dall'utente <meta typeOf="pronto:Collecting" alt="Dati personali raccolti dall'interessato"/></b></span><a-entity showbutton="target:#Collecting"><a class="ico_button" href="javascript:void(0)">+</a></a-entity>
+                        <span style="color:red;" id="collecting_click" vocab="http://ontolgy/PrOnto/0.1/"><b>Dati fornitici direttamente dall'utente <meta typeOf="pronto:Collecting" alt="Dati personali raccolti dall'interessato"/></b></span><a-entity showbutton="target:processingsubjectcollection"><a class="ico_button" href="javascript:void(0)">+</a></a-entity>
                             
                             <ul>
                                 <li>Informazioni di contatto (come nome e indirizzo e-mail o numero di telefono).</li>
@@ -323,7 +323,7 @@
                     <div id="page3_2">
                         <h1>I dati che raccogliamo</h1>
                         <p>
-                            <span style="color:red;" id="AutomatedCollectingClick" vocab="http://ontolgy/PrOnto/0.1/"><b>Dati che raccogliamo in modo automatico <meta typeOf="pronto:Collecting" alt="Dati personali raccolti automaticamente"/></b></span><a-entity showbutton="target:#AutomatedCollecting"><a class="ico_button" href="javascript:void(0)">+</a></a-entity>
+                            <span style="color:red;" id="AutomatedCollectingClick" vocab="http://ontolgy/PrOnto/0.1/"><b>Dati che raccogliamo in modo automatico <meta typeOf="pronto:Collecting" alt="Dati personali raccolti automaticamente"/></b></span><a-entity showbutton="target:processingAutomaticCollection"><a class="ico_button" href="javascript:void(0)">+</a></a-entity>
                                 <ul>
                                     <li>Dati concernenti l'account dell'utente e i suoi progressi di gioco, incluso solitamente un ID account interno.</li>
                                     <li>L'indirizzo IP e gli identificatori del dispositivo mobile dell'utente (come l'ID del dispositivo o l'ID pubblicitario).</li>
@@ -340,7 +340,7 @@
 
                     <div id="page3_3">
                     <h1>I dati che raccogliamo</h1>
-                        <span style="color:red;" id="ThirdPartyClick" vocab="http://ontolgy/PrOnto/0.1/"><b>Dati che raccogliamo tramite i nostri partner <meta typeOf="pronto:Collecting" alt="Dati personali raccolti da terze parti"/></b></span><a-entity showbutton="target:#ThirdPartyCollecting"><a class="ico_button" href="javascript:void(0)">+</a></a-entity>
+                        <span style="color:red;" id="ThirdPartyClick" vocab="http://ontolgy/PrOnto/0.1/"><b>Dati che raccogliamo tramite i nostri partner <meta typeOf="pronto:Collecting" alt="Dati personali raccolti da terze parti"/></b></span><a-entity showbutton="target:thirdParty"><a class="ico_button" href="javascript:void(0)">+</a></a-entity>
                         <p> Usiamo anche partner terzi, come siti di social network, fornitori di servizi di analisi dei dati e reti pubblicitarie per integrare le informazioni sul conto dell'utente, fra le quali:
                             <ul>
                                 <li>dati che riceviamo quando l'utente collega al Servizio uno strumento fornito da terzi (come ad esempio LINE, Facebook, WeChat o Kakao);</li>
@@ -358,7 +358,7 @@
                     <!--* Pagina 4 -->
                     <div id="page4_1">
                         <h1>Perchè raccogliamo i dati degli utenti?</h1>
-                        <p>Usiamo i dati degli utenti per una quantità di fini commerciali. Di seguito ne abbiamo elencato alcuni esempi.
+                        <p>Usiamo i dati degli utenti per una quantità di fini commerciali. Di seguito ne abbiamo elencato alcuni esempi.</p>
                             <b>Funzionamento del Servizio</b> <meta typeOf="pronto:ContractPerformance" alt="Base legale contratto"/>  <meta typeOf="pronto:Purpose" alt="Finalità di servizio"/>
                             <ul>Per adempiere al contratto, elaboriamo i dati necessari a:
                                 <li> creare account e permettere all'utente di partecipare ai nostri giochi e di utilizzare il Servizio;</li>
@@ -573,21 +573,9 @@
                     <a class="metaLink" href="https://github.com/supereggbert/aframe-htmlembed-component"><meta src="assets/github.png" width="80" height="80"><div>Github</div></a>
                     <a class="metaLink" href="https://www.npmjs.com/package/aframe-htmlembed-component"><meta src="assets/npm.png" width="80" height="80"><div>npm</div></a>
                 </a-entity>
-                <a-box plane_component src="assets/controller.png" position="0 1 -4" id="DataController" visible="false"
+                <a-box plane_component position="0 1 -4" id="DataController" visible="false"
                     animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
                     animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 5000; easing: linear; startEvents: startanim">
-                </a-box>
-                <a-box plane_component src="assets/processingsubjectcollection.png" position="0 1 -4" id="Collecting" visible="false"
-                    animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
-                    animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 5000; easing: linear; startEvents: startanim">
-                </a-box>
-                <a-box plane_component src="assets/processingAutomaticCollection.png" position="0 1 -4" id="AutomatedCollecting" visible="false"
-                       animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
-                       animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 5000; easing: linear; startEvents: startanim">
-                </a-box>
-                <a-box plane_component src="assets/processingThirdPartyCollection.png" position="0 1 -4" id="ThirdPartyCollecting" visible="false"
-                       animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
-                       animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 5000; easing: linear; startEvents: startanim">
                 </a-box>
                 <a-plane id="infoPlane" height="2" width="2" position="3.2 2.7 -3.476" src="src:assets/floor.jpg" scale="1 1 1" rotation="0 -45 0" visible="false"></a-plane>
             </a-scene>
