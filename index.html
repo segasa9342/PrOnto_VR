@@ -1,8 +1,8 @@
 <!doctype html>
-<! Just a test ->
 <meta http-equiv="Content-Type" content="multipart/form-data; charset=utf-8">
 <html lang="it" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-is-spa="false" data-ga-id="UA-111391431-24" data-aframe-version="1.2.0" data-docs-version="1.2.0" data-is-android="false" data-is-ios="false" data-supports-vr-legacy="false" data-supports-webvrplus="false">
 <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@bd271e7ee21e5407c2a732813d0488b7bfd8da3d/dist/aframe-master.min.js"></script>
     <script src="https://supereggbert.github.io/aframe-htmlembed-component/dist/build.js"></script>
     <script src="//cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
@@ -101,8 +101,6 @@
       text-align: center;
       padding: 10px 0;
       margin-bottom: 20px;
-      background-color: #444;
-      border: 3px solid #444;
       text-shadow: none;
       display: block;
     }
@@ -132,7 +130,7 @@
       position: relative;
       height: 100%;
     }
-    #page2, #page3_1, #page3_2, #page3_3, #page4_1, #page4_2, #page4_3, #page4_4, #page4_5, #page4_6, #page5_1, #page5_2, #page5_3, #page6, #page7_1, #page7_2, #page7_3, #page7_4, #page8, #page9, #page10, #page11{
+    #page2, #page3_1, #page3_2, #page3_3, #page4_1, #page4_2, #page4_3, #page4_4, #page4_5, #page5_1, #page5_2, #page5_3, #page6, #page7_1, #page7_2, #page7_3, #page7_4, #page8, #page9, #page10, #page11{
       display: none;
       position: relative;
       height: 100%;
@@ -168,9 +166,6 @@
       display: block;
     }
     #slide4_5:target #page4_5{
-      display: block;
-    }
-    #slide4_6:target #page4_6{
       display: block;
     }
     #slide5_1:target #page5_1{
@@ -225,7 +220,6 @@
 <div id="slide4_3" class="slide">
 <div id="slide4_4" class="slide">
 <div id="slide4_5" class="slide">
-<div id="slide4_6" class="slide">
 <div id="slide5_1" class="slide">
 <div id="slide5_2" class="slide">
 <div id="slide5_3" class="slide">
@@ -242,8 +236,6 @@
                 <a-assets>
                     <img id="floor" src="assets/floor.jpg">
                     <img id="sky" src="assets/sky.jpg">
-                    <img id="datacontroller_img" src="assets/controller.png">
-                    <img id="collecting_img" src="assets/processingsubjectcollection.png">
                 </a-assets>
                 <a-plane material="src:assets/floor.jpg; repeat: 700 700; transparent: true;" height="500" width="500" rotation="-90 0 0"></a-plane>
                 <a-sky color="#AFEEEE"></a-sky>
@@ -256,17 +248,17 @@
                 <a-entity id="menu" class="screen menu" htmlembed="ppu:256" position="-3.2 2.7 -4.476" rotation="0 45 0">
                     <h2>Menu</h2>
                     <ul>
-                        <li><a href="#" onclick="boxesdisappear()" class="button">Normativa sulla Privacy</a></li>
-                        <li><a href="#slide2" onclick="boxesdisappear()" class="button">Contattaci</a></li>
-                        <li><a href="#slide3_1" onclick="boxesdisappear()" class="button">I dati che raccogliamo</a></li>
-                        <li><a href="#slide4_1" onclick="boxesdisappear()" class="button">Perchè raccogliamo i dati degli utenti?</a></li>
-                        <li><a href="#slide5_1" onclick="boxesdisappear()" class="button">Chi può visionare i dati degli utenti</a></li>
-                        <li><a href="#slide6" onclick="boxesdisappear()" class="button">Trasferimenti internazionali di dati</a></li>
-                        <li><a href="#slide7_1" onclick="boxesdisappear()" class="button">Diritti e opzioni dell'utente</a></li>
-                        <li><a href="#slide8" onclick="boxesdisappear()" class="button">Cookie e tecnologie simili</a></li>
-                        <li><a href="#slide9" onclick="boxesdisappear()" class="button">Come vengono protetti i dati dell'utente</a></li>
-                        <li><a href="#slide10" onclick="boxesdisappear()" class="button">Minori</a></li>
-                        <li><a href="#slide11" onclick="boxesdisappear()" class="button">Per i soggetti che risiedono in California</a></li>
+                        <li><a href="#" onclick="multifunction()" class="button">Normativa sulla Privacy</a></li>
+                        <li><a href="#slide2" onclick="multifunction('ControllerPanel')" class="button">Contattaci</a></li>
+                        <li><a href="#slide3_1" onclick="multifunction('dataPersonalPanel')" class="button">I dati che raccogliamo</a></li>
+                        <li><a href="#slide4_1" onclick="multifunction()" class="button">Perchè raccogliamo i dati degli utenti?</a></li>
+                        <li><a href="#slide5_1" onclick="multifunction()" class="button">Chi può visionare i dati degli utenti</a></li>
+                        <li><a href="#slide6" onclick="multifunction()" class="button">Trasferimenti internazionali di dati</a></li>
+                        <li><a href="#slide7_1" onclick="multifunction()" class="button">Diritti e opzioni dell'utente</a></li>
+                        <li><a href="#slide8" onclick="multifunction()" class="button">Cookie e tecnologie simili</a></li>
+                        <li><a href="#slide9" onclick="multifunction()" class="button">Come vengono protetti i dati dell'utente</a></li>
+                        <li><a href="#slide10" onclick="multifunction()" class="button">Minori</a></li>
+                        <li><a href="#slide11" onclick="multifunction()" class="button">Per i soggetti che risiedono in California</a></li>
                     </ul>
                 </a-entity>
                 <a-entity id="main" class="screen dark main" htmlembed="ppu:256" position="0 2.5 -5">
@@ -285,7 +277,7 @@
                         <p>La presente Normativa sulla privacy si applica ai giochi, al negozio, ai siti web e ai servizi collegati di Supercell, di seguito congiuntamente denominati il "Servizio". Periodicamente, potremmo apportare delle modifiche alla presente Normativa sulla privacy mediante la pubblicazione della nuova versione su supercell.com. Laddove apportassimo qualsivoglia modifica sostanziale, tale modifica verrà comunicata agli utenti secondo le modalità previste dalla legge applicabile, inclusa la pubblicazione di un avviso sul Servizio prima che la modifica acquisti efficacia. A partire dalla data di efficacia, l'eventuale prosecuzione dell'uso del Servizio sarà regolato dalla nuova Normativa sulla privacy.</li>
                         </p>
                         <br>
-                        <a href="#slide2" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide2" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <!--* Pagina 2 -->
@@ -297,8 +289,8 @@
                             Indirizzo: Jätkäsaarenlaituri 1, FI-00180 Helsinki, Finlandia
                             all'attenzione di: Privacy E-mail: legal-requests@supercell.com
                         </p>
-                        <a href="#" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide3_1" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide3_1" onclick="multifunction()" class="button next">Pagina Successiva</a>
                         </br>
                     </div>
 
@@ -307,7 +299,6 @@
                         <h1>I dati che raccogliamo</h1>
                         <p>Le categorie di dati personali che raccogliamo dipendono dai Servizi usati dall'utente e dai requisiti prescritti dalla legge applicabile.</p>
                         <span style="color:red;" id="collecting_click" vocab="http://ontolgy/PrOnto/0.1/"><b>Dati fornitici direttamente dall'utente <meta typeOf="pronto:Collecting" alt="Dati personali raccolti dall'interessato"/></b></span><a-entity showbutton="target:processingsubjectcollection"><a class="ico_button" href="javascript:void(0)">+</a></a-entity>
-                            
                             <ul>
                                 <li>Informazioni di contatto (come nome e indirizzo e-mail o numero di telefono).</li>
                                 <li>Nome giocatore o tag e password.</li>
@@ -316,8 +307,8 @@
                                 <li>Altri dati che l'utente sceglie di fornirci (come i dati inviatici per identificare un account perso o per partecipare a sondaggi o programmi promozionali).</li>
                             </ul>
                         </p>
-                        <a href="#slide2" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide3_2" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide2" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide3_2" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <div id="page3_2">
@@ -334,8 +325,8 @@
                                 </ul>
                             <br> L'utente ha anche l'opzione di creare un Supercell ID usando il proprio indirizzo e-mail o altre informazioni di contatto.
                         </p>
-                        <a href="#slide3_1" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide3_3" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide3_1" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide3_3" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <div id="page3_3">
@@ -351,15 +342,15 @@
                                 <li>dati resi disponibili dall'utente ad opera di servizi di terze parti (come LINE, Facebook, WeChat o Kakao) tramite le sue impostazioni di privacy.</li>
                             </ul>
                         </p>
-                        <a href="#slide3_2" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide4_1" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide3_2" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide4_1" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <!--* Pagina 4 -->
                     <div id="page4_1">
                         <h1>Perchè raccogliamo i dati degli utenti?</h1>
                         <p>Usiamo i dati degli utenti per una quantità di fini commerciali. Di seguito ne abbiamo elencato alcuni esempi.</p>
-                            <b>Funzionamento del Servizio</b> <meta typeOf="pronto:ContractPerformance" alt="Base legale contratto"/>  <meta typeOf="pronto:Purpose" alt="Finalità di servizio"/>
+                            <h3>Funzionamento del Servizio</h3> <meta typeOf="pronto:ContractPerformance" alt="Base legale contratto"/>  <meta typeOf="pronto:Purpose" alt="Finalità di servizio"/>
                             <ul>Per adempiere al contratto, elaboriamo i dati necessari a:
                                 <li> creare account e permettere all'utente di partecipare ai nostri giochi e di utilizzare il Servizio;</li>
                                 <li> gestire il Servizio;</li>
@@ -368,25 +359,11 @@
                                 <li> inviare all'utente le comunicazioni relative al Servizio;</li>
                             </ul>
                         </p>
-                        <a href="#slide3_1" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide4_2" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide3_1" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide4_2" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <div id="page4_2">
-                        <h1>Perchè raccogliamo i dati degli utenti?</h1>
-                        <p>
-                        <ul>  Per adempiere al contratto, elaboriamo i dati necessari a:
-                            <li> creare account e permettere all'utente di partecipare ai nostri giochi e di utilizzare il Servizio;</li>
-                            <li> gestire il Servizio;</li> <li> verificare e confermare i pagamenti;</li>
-                            <li> fornire e consegnare prodotti e servizi richiesti dall'utente;</li>
-                            <li> inviare all'utente le comunicazioni relative al Servizio;</li>
-                        </ul>
-                        </p>
-                        <a href="#slide4_1" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide4_3" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
-                    </div>
-
-                    <div id="page4_3">
                         <h1>Perchè raccogliamo i dati degli utenti?</h1>
                         <h3>Rendere il Servizio più idoneo ai nostri giocatori</h3>  <meta typeOf="pronto:LegitimateInterest" alt="Base legale legisttimo interesse"/>  <meta typeOf="pronto:Purpose" alt="Finalità di servizio aggiunto"/>
                             <ul>  Per adempiere al contratto, elaboriamo i dati necessari a:
@@ -402,11 +379,11 @@
                                 <li> consentire all'utente di comunicare con gli altri giocatori.</li>
                             </ul>
                         </p>
-                        <a href="#slide4_2" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide4_4" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide4_1" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide4_3" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
-                    <div id="page4_4">
+                    <div id="page4_3">
                         <h1>Perchè raccogliamo i dati degli utenti?</h1>
                         <h3> <b>Mostrare annunci personalizzati</b><meta typeOf="pronto:LegitimateInterest"  alt="Base legale legittimo interesse"/>  <meta typeOf="pronto:Marketing" alt="Finalità di marketing"/>  <meta alt="finalità di profilazione"/></h3>
                         <ul> Per mostrare annunci pubblicitari personalizzati all'interno del Servizio, nonché in altri siti web e servizi (inclusa la posta elettronica), abbiamo il legittimo interesse a elaborare i dati necessari per:
@@ -415,11 +392,11 @@
                         </ul>
                         <p> Per informazioni su come disattivare gli annunci personalizzati, vedere la successiva sezione "Diritti e opzioni dell'utente".
                         </p>
-                        <a href="#slide4_3" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide4_5" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide4_2" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide4_4" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
-                    <div id="page4_5">
+                    <div id="page4_4">
                         <h1>Perchè raccogliamo i dati degli utenti?</h1>
                         <h3> <b>Mantenere il Servizio equo e sicuro</b> <br/> <br/><meta typeOf="pronto:LegitimateInterest" alt="Base legale legittimo interesse"/>  <meta typeOf="pronto:Security" alt="Finalità di sicurezza"/></h3>
                         <ul> Garantire parità di condizioni all'interno del Servizio è una nostra priorità. Per maggiori informazioni sulla nostra politica sull'utilizzo accettabile, vedere le Condizioni d'Uso di Supercell.
@@ -427,19 +404,19 @@
                             <li> moderare le chat per evitare comportamenti inadeguati e fraudolenti da parte dei giocatori;</li>
                             <li> prendere provvedimenti contro i giocatori che hanno comportamenti inadeguati e fraudolenti;</li>
                         </ul>
-                        <a href="#slide4_4" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide4_6" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide4_3" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide4_5" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
-                    <div id="page4_6">
+                    <div id="page4_5">
                         <h1>Perchè raccogliamo i dati degli utenti?</h1>
                         <h3> <b>Analizzare, delineare e segmentare</b> <meta typeOf="pronto:Research" alt="Finalità di ricerca"/>  <meta typeOf="pronto:Profiling" alt="Finalità di profilazione"/> </h3>
                         <p>In tutti i casi precedenti abbiamo facoltà di analizzare, delineare e segmentare tutti i dati raccolti
                         <h3> <b>Previo consenso dell'utente</b> <meta  typeOf="pronto:ConsentBase" alt="Base legale consenso"/></h3>
                         <p>Previo consenso dell'utente, abbiamo la facoltà di trattare i dati dell'utente per fini ulteriori.
                         </p>
-                        <a href="#slide4_5" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide5_1" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide4_4" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide5_1" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <!--* Pagina 5 -->
@@ -450,8 +427,8 @@
                         <p>Le funzionalità social sono un elemento fondamentale dei nostri giochi. Altri giocatori e utenti possono ad esempio visualizzare i dati del profilo, le attività di gioco e leggere i messaggi pubblicati dall'utente.
                         <h4>I nostri fornitori</h4>
                         <p>Allo scopo di fornire il Servizio, Supercell si avvale di collaboratori esterni. Questi fornitori trattano i dati dell'utente esclusivamente in base alle istruzioni di Supercell per fornire il Servizio, e svolgono attività come hosting, assistenza ai giocatori, pubblicità, analisi e prevenzione delle condotte fraudolente.
-                        <a href="#slide4_6" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide5_2" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide4_5" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide5_2" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <div id="page5_2">
@@ -459,8 +436,8 @@
                         <h4>Altre aziende e autorità pubbliche</h4>
                         <p>Al fine di verificare i pagamenti (con fornitori di servizi di pagamento come PayPal) e di contrastare condotte fraudolente e attività illecite, abbiamo facoltà di trattare e divulgare i dati con altre società e organizzazioni, nonché di fornirli alle autorità pubbliche in risposta alle richieste legittime di queste ultime.
                             Possiamo anche divulgare i dati dell'utente previo suo consenso, per rispettare la legge o per proteggere la proprietà, la sicurezza e i diritti nostri, dei nostri giocatori o di altri.
-                        <a href="#slide5_1" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide5_3" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide5_1" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide5_3" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <div id="page5_3">
@@ -468,8 +445,8 @@
                         <h4> Partner pubblicitari e dei social media</h4>
                         <p>Il Servizio include funzionalità fornite dai nostri partner, come strumenti di interazione con i social media, funzionalità che si avvalgono di application programming interface (API) o software development kit (SDK) e pubblicità all'interno del gioco. Un elenco di questi partner è disponibile su supercell.com/en/partner-opt-out. Questi partner possono accedere ai dati dell'utente e operare secondo le proprie normative sulla privacy. È consigliabile verificare queste normative sulla privacy per saperne di più sulle loro pratiche in materia di elaborazione dei dati.
                             I suddetti partner potrebbero accedere ai dati concernenti le attività e il dispositivo dell'utente (come l'indirizzo IP, gli identificatori dei dispositivi mobili, la pagina o le pagine visitate, la posizione e l'orario). Potremo anche combinare e condividere i dati che abbiamo raccolto sull'utente con partner pubblicitari terzi. I suddetti partner potrebbero usare i dati (nonché dati simili raccolti da altri siti web) allo scopo di mostrare all'utente pubblicità personalizzata quando visita servizi di terze parti all'interno della loro rete. I partner possono operare in base alle proprie normative sulla privacy. Tale pratica è comunemente nota come "pubblicità basata sugli interessi" o "pubblicità comportamentale online". L'utente può scegliere di non condividere i propri dati personali con partner pubblicitari terzi, seguendo le istruzioni riportate nella sezione "Diritti e opzioni dell'utente" nel prosieguo.
-                        <a href="#slide5_2" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide6" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide5_2" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide6" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <!--* Pagina 6 -->
@@ -478,8 +455,8 @@
                         <p>
                             Il nostro Servizio è globale per sua natura e i dati dell'utente possono quindi essere trasferiti in qualsiasi parte del mondo. Poiché alcuni paesi possono avere leggi sulla protezione dei dati diverse da quelle del paese dell'utente, adottiamo misure per garantire che siano state messe in atto adeguate tutele dei dati dell'utente, come illustrato nella presente Normativa. Le misure di salvaguardia adeguate che potremmo usare includono clausole contrattuali approvate dalla Commissione Europea e ulteriori misure di salvaguardia lecite. </p>
                         </p>
-                        <a href="#slide5_3" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide7_1" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide5_3" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide7_1" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <!--* Pagina 7 -->
@@ -487,8 +464,8 @@
                         <h1>Diritti e opzioni dell'utente</h1>
                         <h3> <b>Disattivazione delle e-mail di marketing e altro marketing diretto</b> <meta typeOf="pronto:RigthToWithdraw" alt="Diritto a ritirare il consenso"/></h3>
                         <p>L'utente può scegliere di non ricevere comunicazioni promozionali, ad esempio le email di marketing che inviamo, seguendo le istruzioni contenute in tali comunicazioni o cambiando le relative impostazioni all'interno del gioco. L'aggiornamento delle impostazioni potrebbe non avere effetto immediato. L'utente potrebbe inoltre continuare a ricevere comunicazioni di carattere non promozionale da parte nostra, come avvisi concernenti il Servizio o aggiornamenti alle nostre Condizioni d'Uso o alla presente Normativa sulla privacy.</p>
-                        <a href="#slide6" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide7_2" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide6" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide7_2" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <div id="page7_2">
@@ -500,8 +477,8 @@
                             L'utente può anche disattivare le offerte personalizzate all'interno del gioco tramite le opzioni eventualmente previste nelle impostazioni del gioco.</p>
                         <h3> <b>Accesso ai dati personali che abbiamo sull'utente</b><meta typeOf="pronto:RigthToAccess" alt="Diritto di accesso"/>  <meta typeOf="pronto:Copying" src="img/ico/processing/processingCopy.png" alt="Processo di copia"/></h3>
                         <p>Se l'utente lo richiede, invieremo una copia dei dati personali in formato elettronico.</p>
-                    <a href="#slide7_1" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                    <a href="#slide7_3" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                    <a href="#slide7_1" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                    <a href="#slide7_3" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <div id="page7_3">
@@ -511,8 +488,8 @@
                             Tutte le richieste saranno evase entro un periodo di tempo ragionevole.  Qualora non fossimo riusciti a dare risposta soddisfacente a eventuali dubbi relativi alla privacy o all'uso dei dati, l'utente può altresì contattare l'autorità di controllo per la protezione dei dati locale dell'Area Economica Europea, della Svizzera o del Regno Unito per le questioni irrisolte.
                             L'utente può usare le opzioni di cui alla Pagina Successiva sezione "Contattaci" laddove voglia, in qualità di interessato, esercitare i diritti descritti in precedenza. Risponderemo a tutte le richieste in conformità alla legge applicabile. Per tutelare la privacy dell'utente, potremmo altresì prendere misure aggiuntive per verificare la sua identità prima di soddisfare la sua richiesta, per esempio chiedendo di fornirci una ricevuta d'acquisto o altre informazioni sull'account, chiedendo di collegare l'indirizzo e-mail all'account di gioco (per esempio tramite Supercell ID) o chiedendo di rispondere a domande relative alle attività dell'utente sui nostri Servizi. Una volta verificata l'identità, l'utente potrà altresì nominare un rappresentante autorizzato per esercitare i propri diritti per proprio conto indicando alla nostra assistenza clienti le informazioni di contatto del rappresentante secondo le modalità richieste dalla legge applicabile.
                             L'utente ha il diritto di non subire trattamenti discriminatori derivanti dall'esercizio di tali diritti.
-                    <a href="#slide7_2" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                    <a href="#slide8" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                    <a href="#slide7_2" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                    <a href="#slide8" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <!--* Pagina 8 -->
@@ -529,8 +506,8 @@
                             <li>fornire su ciascun dispositivo pubblicità personalizzate desunte dalle abitudini di navigazione relative a tutti i dispositivi.
                         </ul>
                         <p>  Per ulteriori informazioni (incluse le modalità di rifiuto o revoca del consenso) si prega di visitare https://supercell.com/en/partner-opt-out/. È possibile disabilitare i cookie nelle impostazioni del browser, ma alcune parti del Servizio potrebbero di conseguenza non funzionare correttamente.
-                        <a href="#slide7_3" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide9" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide7_3" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide9" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <!--* Pagina 9 -->
@@ -542,8 +519,8 @@
                         <p>	Conserveremo i dati dell'utente finché il suo account sarà attivo o, ove necessario, per fornire i nostri Servizi. Potremmo, per esempio, rimuovere periodicamente l'identificazione degli account non utilizzati, nonché esaminare e rimuovere l'identificazione di dati non necessari.
                             Non raccogliamo o sollecitiamo consapevolmente i dati personali relativi a, o messaggi pubblicitari basati sugli interessi mirati o diretti a, chiunque abbia un'età inferiore ai 13 anni né consentiamo consapevolmente a tali persone di utilizzare i nostri Servizi.
 
-                        <a href="#slide8" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide10" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide8" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide10" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <!--* Pagina 10 -->
@@ -555,31 +532,29 @@
                             Si prega di notare che per alcuni dei nostri Servizi potremo adottare un limite di età più elevato (per esempio 16 anni) rispetto a quello indicato nei due paragrafi precedenti. In questo modo possiamo fornire un'esperienza di gioco sicura per i nostri giocatori e proteggere i giocatori giovani.
                             I genitori o i tutori che desiderino esaminare i dati personali raccolti dai minori o che vogliano modificarli o eliminarli possono contattarci ai recapiti di cui in precedenza. Laddove venissimo a conoscenza di aver ricevuto dati personali da parte di un minore in maniera non conforme a quanto precede e fatto salvo il caso in cui fossimo soggetti all'obbligo giuridico di conservarli, provvederemo alla relativa eliminazione. Procederemo altresì alla cancellazione dell'account del minore e/o lo riconvertiremo, laddove possibile, all'esperienza destinata ai minorenni.
                         </p>
-                        <a href="#slide9" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#slide11" onclick="boxesdisappear()" class="button next">Pagina Successiva</a>
+                        <a href="#slide9" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#slide11" onclick="multifunction()" class="button next">Pagina Successiva</a>
                     </div>
 
                     <!--* Pagina 11 -->
                     <div id="page11">
                         <h1>Per i soggetti che risiedono in California</h1>
                         Si prega di visitare supercell.com/en/disclosure-california-residents per informazioni speciali concernenti i soggetti che risiedono in California.
-                        <a href="#slide10" onclick="boxesdisappear()" class="button prev">Pagina Precedente</a>
-                        <a href="#" onclick="boxesdisappear()" class="button next">Home</a>
+                        <a href="#slide10" onclick="multifunction()" class="button prev">Pagina Precedente</a>
+                        <a href="#" onclick="multifunction()" class="button next">Home</a>
                     </div>
                 </a-entity>
-                <a-entity id="menu" class="screen menu dark" htmlembed="ppu:256" position="3.2 2.7 -4.476" rotation="0 -45 0">
+                <a-entity id="menu" class="screen menu" htmlembed="ppu:256" position="3.2 2.7 -4.476" rotation="0 -45 0">
                     <h2>Links</h2>
-                    <a class="metaLink" href="https://aframe.io/"><meta src="assets/aframe.png" width="80" height="80"><div>A-Frame</div></a>
-                    <a class="metaLink" href="https://github.com/supereggbert/aframe-htmlembed-component"><meta src="assets/github.png" width="80" height="80"><div>Github</div></a>
-                    <a class="metaLink" href="https://www.npmjs.com/package/aframe-htmlembed-component"><meta src="assets/npm.png" width="80" height="80"><div>npm</div></a>
+                    <div class="metaLinkDiv" id="ControllerPanel" style="display: none;"><a class="metaLink"><img src="assets/Controller.png" width="120" height="120"><div>Data Controller</div></a></div>
+                    <div class="metaLinkDiv" id="dataPersonalPanel" style="display: none;"><a class="metaLink"><img src="assets/dataPersonal.png" width="120" height="120"><div>Dati Personali</div></a></div>
                 </a-entity>
-                <a-box plane_component position="0 1 -4" id="DataController" visible="false"
+                <a-box plane_component position="0 1 -4" id="IconBox" visible="false"
                     animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
                     animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 5000; easing: linear; startEvents: startanim">
                 </a-box>
                 <a-plane id="infoPlane" height="2" width="2" position="3.2 2.7 -3.476" src="src:assets/floor.jpg" scale="1 1 1" rotation="0 -45 0" visible="false"></a-plane>
             </a-scene>
-</div>
 </div>
 </div>
 </div>

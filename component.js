@@ -13,6 +13,7 @@ AFRAME.registerComponent('showbutton', {
         sceneEl.querySelector('a-box').setAttribute('visible','false');
       }else{
         var sceneEl = document.querySelector('a-scene');  // Or this.el since we're in a component.
+        sceneEl.querySelector('a-box').setAttribute('visible','false');
         sceneEl.querySelector('a-box').setAttribute('src','assets/' + origin +'.png');
         sceneEl.querySelector('a-box').emit("startanim")
         sceneEl.querySelector('a-box').setAttribute('visible','true');
@@ -35,7 +36,17 @@ init: function() {
   })
 }
 });
+
 function boxesdisappear() {
 document.querySelectorAll('a-box').forEach( x=> x.setAttribute("visible","false"));
 document.querySelector('#infoPlane').setAttribute("visible","false");
 };
+function showIcon(imageURL){
+Array.from(document.getElementsByClassName('metaLinkDiv')).forEach(container => container.style.display = 'none');
+document.getElementById(imageURL).style.display = "block";
+}
+
+function multifunction(value) {
+    boxesdisappear();
+    showIcon(value)
+}
