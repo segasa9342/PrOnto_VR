@@ -43,7 +43,7 @@ document.querySelector('#infoPlane').setAttribute("visible","false");
 };
 function showIcon(imageURL){
 Array.from(document.getElementsByClassName('metaLinkDiv')).forEach(container => container.style.display = 'none');
-document.getElementById(imageURL).style.display = "block";
+document.getElementById(imageURL).style.display = "inline";
 }
 
 function multifunction(value) {
