@@ -36,6 +36,19 @@ init: function() {
   })
 }
 });
+function AknLink() {
+    var fullUrl = window.location.href
+    var slideID = fullUrl.split('#').pop();
+    var slideID = slideID.replace("_", "__para_");
+    var slideID = slideID.replace("slide", "chp_");
+    var request = new XMLHttpRequest();
+    request.open("GET", "../privacy_policy.xml", false);
+    request.send();
+    var xml = request.responseXML;
+    var chapters = xml.getElementsByTagName("chapter");
+    const chapter = Array.from(chapters).filter(chapter => chapter.innerHTML.indexOf(slideID) !== -1)
+    console.log(slideID, chapter[0])
+};
 
 function boxesdisappear() {
 document.querySelectorAll('a-box').forEach( x=> x.setAttribute("visible","false"));

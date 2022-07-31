@@ -1,0 +1,253 @@
+﻿<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"
+    xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" 
+    xmlns:cirsfid="http://cirsfid/propetary.xsd"><doc name="privacy_policy">
+        <meta>
+            <identification source="#source">
+                <FRBRWork>
+                    <FRBRthis value="/akn/it/doc/supercelloy/2021-04-15/privacy-policy-1/!main"/>
+                    <FRBRuri value="/akn/it/doc/supercelloy/2021-04-15/privacy-policy-1"/>
+                    <FRBRdate date="2021-04-15" name=""/>
+                    <FRBRauthor href="#" as="#"/>
+                    <FRBRcountry value="it"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/akn/it/doc/supercelloy/2021-04-15/privacy-policy-1/ita@/!main"/>
+                    <FRBRuri value="/akn/it/doc/supercelloy/2021-04-15/privacy-policy-1/ita@"/>
+                    <FRBRdate date="2021-04-15" name=""/>
+                    <FRBRauthor href="#" as="#"/>
+                    <FRBRlanguage language="ita"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/akn/it/doc/supercelloy/2021-04-15/privacy-policy-1/ita@/main.xml/!main"/>
+                    <FRBRuri value="/akn/it/doc/supercelloy/2021-04-15/privacy-policy-1/ita@.xml"/>
+                    <FRBRdate date="2021-05-30" name=""/>
+                    <FRBRauthor href="#" as="#"/>
+                </FRBRManifestation>
+            </identification>
+            <references source="#source">
+                <TLCPerson eId="source" href="/akn/ontology/person/somebody" showAs="Somebody"/>
+                <TLCOrganization eId="supercellOy" href="/akn/ontology/organization/it/supercellOy" showAs="Supercell Oy"/>
+                <TLCRole eId="controller" href="/akn/ontology/role/it/Controller" showAs="Controller"/>
+                <TLCObject eId="personalData" href="/akn/ontology/object/it/PersonalData" showAs="Personal Data"/>
+                <TLCRole eId="minor" href="/akn/ontology/role/it/minor" showAs="Minor"/>
+                <TLCRole eId="thirdparty" href="/akn/ontology/role/it/thirdparty" showAs="ThirdParty"/>
+            </references>
+        </meta>
+        <preface>
+            <p>
+                <docTitle>INFORMATIVA SULLA PRIVACY DI SUPERCELL </docTitle>
+            </p>
+        </preface>
+        <mainBody>
+            <chapter eId="chp_1">
+                <heading eId="chp_1__heading">Normativa sulla privacy</heading>
+                <content eId="chp_1__content">
+                    <p>Data di validità: 
+                        <docDate date="2021-04-15">15 aprile 2021 </docDate> Grazie per aver giocato ai nostri titoli!
+                    </p>
+                    <p>La presente Normativa sulla privacy descrive:</p>
+                    <p>La presente Normativa sulla privacy si applica ai giochi, al negozio, ai siti web e ai servizi collegati di Supercell, di seguito congiuntamente denominati il "Servizio". Periodicamente, potremmo apportare delle modifiche alla presente Normativa sulla privacy mediante la pubblicazione della nuova versione su supercell.com. Laddove apportassimo qualsivoglia modifica sostanziale, tale modifica verrà comunicata agli utenti secondo le modalità previste dalla legge applicabile, inclusa la pubblicazione di un avviso sul Servizio prima che la modifica acquisti efficacia. A partire dalla data di efficacia, l'eventuale prosecuzione dell'uso del Servizio sarà regolato dalla nuova Normativa sulla privacy.</p>
+                </content>
+            </chapter>
+            <chapter eId="chp_2">
+                <heading eId="chp_2__heading">CONTATTACI</heading>
+                <content eId="chp_2__content">
+                    <p/>
+                    <p>In caso di domande in materia di protezione dei dati o di richieste per la risoluzione di problemi relativi ai propri dati personali, si prega di contattarci primariamente tramite la funzione di assistenza presente in ciascun gioco Supercell, che ci permetterà di rispondere più velocemente. In alternativa, è possibile contattare:Denominazione del titolare del trattamento: 
+                        <organization refersTo="#supercellOy">
+                            <role refersTo="#controller" eId="role_1">Supercell Oy</role>
+                        </organization>Indirizzo: Jätkäsaarenlaituri 1, FI-00180 Helsinki, Finlandia all'attenzione di: PrivacyE-mail: legal-requests@supercell.com
+                    </p>
+                </content>
+            </chapter>
+            <p/>
+            <chapter eId="chp_3">
+                <heading eId="chp_3__heading">I DATI CHE RACCOGLIAMO</heading>
+                <paragraph eId="chp_3__para_1">
+                    <content eId="chp_3__para_1__content">
+                        <p>Le categorie di 
+                            <object refersTo="#personalData">dati personali</object> che raccogliamo dipendono dai Servizi usati dall'utente e dai requisiti prescritti dalla legge applicabile.
+                        </p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_3__para_2">
+                    <heading eId="chp_3__para_2__heading">Dati fornitici direttamente dall'utente</heading>
+                    <content eId="chp_3__para_2__content">
+                        
+                            <ol class="toMark">
+                                <li>Informazioni di contatto (come nome e indirizzo e-mail o numero di telefono).</li>
+                                <li>Nome giocatore o tag e password.</li>
+                                <li>Informazioni del profilo (come ad esempio la foto del profilo)</li>
+                                <li>I messaggi dell'utente al Servizio assistenza (come i registri delle chat e i ticket all'assistenza giocatori).</li>
+                                <li>Altri dati che l'utente sceglie di fornirci (come i dati inviatici per identificare un account perso o per partecipare a sondaggi o programmi promozionali).</li>
+                            </ol>
+                        
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_3__para_3">
+                    <heading eId="chp_3__para_3__heading">Dati che raccogliamo in modo automatico</heading>
+                    <content eId="chp_3__para_3__content">
+                        <p>L'utente ha anche l'opzione di creare un Supercell ID usando il proprio indirizzo e-mail o altre informazioni di contatto.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_3__para_4">
+                    <heading eId="chp_3__para_4__heading">Dati che raccogliamo tramite i nostri partner</heading>
+                    <content eId="chp_3__para_4__content">
+                        <p>Usiamo anche partner terzi, come siti di social network, fornitori di servizi di analisi dei dati e reti pubblicitarie per integrare le informazioni sul conto dell'utente, fra le quali:</p>
+                    </content>
+                </paragraph>
+            </chapter>
+            <chapter eId="chp_4">
+                <heading eId="chp_4__heading">PERCHÉ RACCOGLIAMO I DATI DEGLI UTENTI?</heading>
+                <paragraph eId="chp_4__para_1">
+                    <content eId="chp_4__para_1__content">
+                        <p>Usiamo i dati degli utenti per una quantità di fini commerciali. Di seguito ne abbiamo elencato alcuni esempi.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_4__para_2">
+                    <heading eId="chp_4__para_2__heading">Funzionamento del Servizio</heading>
+                    <content eId="chp_4__para_2__content">
+                        <p>Per adempiere al contratto, elaboriamo i dati necessari a:</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_4__para_3">
+                    <content eId="chp_4__para_3__content">
+                        <p>Rendere il Servizio più idoneo ai nostri giocatoriPer fornire un Servizio eccellente ai nostri giocatori, abbiamo il legittimo interesse a raccogliere ed elaborare i dati necessari per:</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_4__para_4">
+                    <heading eId="chp_4__para_4__heading">Mostrare annunci personalizzati</heading>
+                    <content eId="chp_4__para_4__content">
+                        <p>Per mostrare annunci pubblicitari personalizzati all'interno del Servizio, nonché in altri siti web e servizi (inclusa la posta elettronica), abbiamo il legittimo interesse a elaborare i dati necessari per:</p>
+                        <p>Per informazioni su come disattivare gli annunci personalizzati, vedere la successiva sezione "Diritti e opzioni dell'utente".</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_4__para_5">
+                    <heading eId="chp_4__para_5__heading">Mantenere il Servizio equo e sicuro</heading>
+                    <content eId="chp_4__para_5__content">
+                        <p>Garantire parità di condizioni all'interno del Servizio è una nostra priorità. Per maggiori informazioni sulla nostra politica sull'utilizzo accettabile, vedere le Condizioni d'Uso di Supercell.Al fine di mantenere il Servizio e le sue funzionalità social sicure ed eque, per combattere le frodi e garantire viceversa un utilizzo accettabile, abbiamo il legittimo interesse a elaborare i dati necessari per:</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_4__para_6">
+                    <heading eId="chp_4__para_6__heading">Analizzare, delineare e segmentare</heading>
+                    <content eId="chp_4__para_6__content">
+                        <p>In tutti i casi precedenti abbiamo facoltà di analizzare, delineare e segmentare tutti i dati raccolti.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_4__para_7">
+                    <heading eId="chp_4__para_7__heading">Previo consenso dell'utente</heading>
+                    <content eId="chp_4__para_7__content">
+                        <p>Previo consenso dell'utente, abbiamo la facoltà di trattare i dati dell'utente per fini ulteriori.</p>
+                    </content>
+                </paragraph>
+            </chapter>
+            <p/>
+            <chapter eId="chp_5">
+                <heading eId="chp_5__heading">CHI PUÒ VISIONARE I DATI DELL'UTENTE</heading>
+                <paragraph eId="chp_5__para_1">
+                    <content eId="chp_5__para_1__content">
+                        <p>Oltre a Supercell, l'accesso ai dati è possibile ad altri nelle seguenti situazioni.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_5__para_2">
+                    <heading eId="chp_5__para_2__heading">Altri giocatori e utenti</heading>
+                    <content eId="chp_5__para_2__content">
+                        <p>Le funzionalità social sono un elemento fondamentale dei nostri giochi. Altri giocatori e utenti possono ad esempio visualizzare i dati del profilo, le attività di gioco e leggere i messaggi pubblicati dall'utente.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_5__para_3">
+                    <content eId="chp_5__para_3__content">
+                        <p>I nostri fornitoriAllo scopo di fornire il Servizio, Supercell si avvale di collaboratori esterni. Questi fornitori trattano i dati dell'utente esclusivamente in base alle istruzioni di Supercell per fornire il Servizio, e svolgono attività come hosting, assistenza ai giocatori, pubblicità, analisi e prevenzione delle condotte fraudolente.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_5__para_4">
+                    <heading eId="chp_5__para_4__heading">Altre aziende e autorità pubbliche</heading>
+                    <content eId="chp_5__para_4__content">
+                        <p>Al fine di verificare i pagamenti (con fornitori di servizi di pagamento come PayPal) e di contrastare condotte fraudolente e attività illecite, abbiamo facoltà di trattare e divulgare i dati con altre società e organizzazioni, nonché di fornirli alle autorità pubbliche in risposta alle richieste legittime di queste ultime.Possiamo anche divulgare i dati dell'utente previo suo consenso, per rispettare la legge o per proteggere la proprietà, la sicurezza e i diritti nostri, dei nostri giocatori o di altri.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_5__para_5">
+                    <heading eId="chp_5__para_5__heading">Partner pubblicitari e dei social media</heading>
+                    <content eId="chp_5__para_5__content">
+                        <p>Il Servizio include funzionalità fornite dai nostri partner, come strumenti di interazione con i social media, funzionalità che si avvalgono di application programming interface (API) o software development kit (SDK) e pubblicità all'interno del gioco. Un elenco di questi partner è disponibile su supercell.com/en/partner-opt-out. Questi partner possono accedere ai dati dell'utente e operare secondo le proprie normative sulla privacy. È consigliabile verificare queste normative sulla privacy per saperne di più sulle loro pratiche in materia di elaborazione dei dati.I suddetti partner potrebbero accedere ai dati concernenti le attività e il dispositivo dell'utente (come l'indirizzo IP, gli identificatori dei dispositivi mobili, la pagina o le pagine visitate, la posizione e l'orario). Potremo anche combinare e condividere i dati che abbiamo raccolto sull'utente con 
+                            <role refersTo="#thirdparty" eId="role_2">partner pubblicitari terzi</role>. I suddetti partner potrebbero usare i dati (nonché dati simili raccolti da altri siti web) allo scopo di mostrare all'utente pubblicità personalizzata quando visita servizi di terze parti all'interno della loro rete. I partner possono operare in base alle proprie normative sulla privacy. Tale pratica è comunemente nota come "pubblicità basata sugli interessi" o "pubblicità comportamentale online". L'utente può scegliere di non condividere i propri dati personali con partner pubblicitari terzi, seguendo le istruzioni riportate nella sezione "Diritti e opzioni dell'utente" nel prosieguo.
+                        </p>
+                    </content>
+                </paragraph>
+            </chapter>
+            <chapter eId="chp_6">
+                <heading eId="chp_6__heading">TRASFERIMENTI INTERNAZIONALI DI DATI</heading>
+                <content eId="chp_6__content">
+                    <p>Il nostro Servizio è globale per sua natura e i dati dell'utente possono quindi essere trasferiti in qualsiasi parte del mondo. Poiché alcuni paesi possono avere leggi sulla protezione dei dati diverse da quelle del paese dell'utente, adottiamo misure per garantire che siano state messe in atto adeguate tutele dei dati dell'utente, come illustrato nella presente Normativa. Le misure di salvaguardia adeguate che potremmo usare includono clausole contrattuali approvate dalla Commissione Europea e ulteriori misure di salvaguardia lecite.</p>
+                </content>
+            </chapter>
+            <chapter eId="chp_7">
+                <heading eId="chp_7__heading">DIRITTI E OPZIONI DELL'UTENTE</heading>
+                <paragraph eId="chp_7__para_1">
+                    <heading eId="chp_7__para_1__heading">Disattivazione delle e-mail di marketing e altro marketing diretto</heading>
+                    <content eId="chp_7__para_1__content">
+                        <p>L'utente può scegliere di non ricevere comunicazioni promozionali, ad esempio le email di marketing che inviamo, seguendo le istruzioni contenute in tali comunicazioni o cambiando le relative impostazioni all'interno del gioco. L'aggiornamento delle impostazioni potrebbe non avere effetto immediato. L'utente potrebbe inoltre continuare a ricevere comunicazioni di carattere non promozionale da parte nostra, come avvisi concernenti il Servizio o aggiornamenti alle nostre Condizioni d'Uso o alla presente Normativa sulla privacy.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_7__para_2">
+                    <heading eId="chp_7__para_2__heading">Notifiche push</heading>
+                    <content eId="chp_7__para_2__content">
+                        <p>Potremmo inviare all'utente notifiche push tramite le nostre applicazioni per dispositivi mobili. L'utente può negare il consenso alla ricezione di questo tipo di comunicazione cambiando le impostazioni sul dispositivo mobile.Disattivazione della pubblicità personalizzataL'utente può disattivare i servizi pubblicitari basati sugli interessi sulle applicazioni mobili verificando le impostazioni di privacy del dispositivo Android o iOS e disattivando "permetti alle app di richiedere il tracciamento" o selezionando "limita raccolta dati pubblicitari" (Apple iOS) oppure "disattiva pubblicità basata sugli interessi" (Android). Per maggiori informazioni vedere anche: supercell.com/en/partner-opt-out.L'utente può anche disattivare le offerte personalizzate all'interno del gioco tramite le opzioni eventualmente previste nelle impostazioni del gioco.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_7__para_3">
+                    <heading eId="chp_7__para_3__heading">Accesso ai dati personali che abbiamo sull'utente</heading>
+                    <content eId="chp_7__para_3__content">
+                        <p>Se l'utente lo richiede, invieremo una copia dei dati personali in formato elettronico.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_7__para_4">
+                    <heading eId="chp_7__para_4__heading">Altri diritti dell'utente</heading>
+                    <content eId="chp_7__para_4__content">
+                        <p>L'utente ha anche il diritto di correggere i propri dati, cancellarli, obiettare su come li utilizziamo o li condividiamo e limitare il modo in cui li utilizziamo o li condividiamo. L'utente può sempre revocare il consenso.Tutte le richieste saranno evase entro un periodo di tempo ragionevole. Qualora non fossimo riusciti a dare risposta soddisfacente a eventuali dubbi relativi alla privacy o all'uso dei dati, l'utente può altresì contattare l'autorità di controllo per la protezione dei dati locale dell'Area Economica Europea, della Svizzera o del Regno Unito per le questioni irrisolte.L'utente può usare le opzioni di cui alla precedente sezione "Contattaci" laddove voglia, in qualità di interessato, esercitare i diritti descritti in precedenza. Risponderemo a tutte le richieste in conformità alla legge applicabile. Per tutelare la privacy dell'utente, potremmo altresì prendere misure aggiuntive per verificare la sua identità prima di soddisfare la sua richiesta, per esempio chiedendo di fornirci una ricevuta d'acquisto o altre informazioni sull'account, chiedendo di collegare l'indirizzo e-mail all'account di gioco (per esempio tramite Supercell ID) o chiedendo di rispondere a domande relative alle attività dell'utente sui nostri Servizi. Una volta verificata l'identità, l'utente potrà altresì nominare un rappresentante autorizzato per esercitare i propri diritti per proprio conto indicando alla nostra assistenza clienti le informazioni di contatto del rappresentante secondo le modalità richieste dalla legge applicabile.L'utente ha il diritto di non subire trattamenti discriminatori derivanti dall'esercizio di tali diritti.</p>
+                    </content>
+                </paragraph>
+            </chapter>
+            <chapter eId="chp_8">
+                <heading eId="chp_8__heading">COOKIE E TECNOLOGIE SIMILI</heading>
+                <paragraph eId="chp_8__para_1">
+                    <content eId="chp_8__para_1__content">
+                        <p>Come la maggior parte dei servizi online, noi e i nostri partner utilizziamo cookie e tecnologie simili per fornire e personalizzare il Servizio, analizzarne l'utilizzo, indirizzare gli annunci pubblicitari e prevenire le frodi. Cookie e altre tecnologie simili consentono a noi e ai nostri partner di conservare le preferenze e tracciare le attività dell'utente all'interno del Servizio. Si prega di notare che tali partner possono operare in base alle proprie normative sulla privacy.Noi e i nostri partner raccogliamo e conserviamo le informazioni concernenti le interazioni degli utenti con siti web e applicazioni non affiliati che utilizzano le nostre tecnologie, inclusi cookie e tecnologie di tracciamento simili. Ciò ci consente, per esempio, di desumere la presenza di un utente o di un nucleo familiare comune dietro una pluralità di dispositivi o browser e di collegare quindi tali dispositivi e browser in un device graph. Tale attività è intrapresa per:</p>
+                        <p>Per ulteriori informazioni (incluse le modalità di rifiuto o revoca del consenso) si prega di visitare https://supercell.com/en/partner-opt-out/. È possibile disabilitare i cookie nelle impostazioni del browser, ma alcune parti del Servizio potrebbero di conseguenza non funzionare correttamente.</p>
+                    </content>
+                </paragraph>
+            </chapter>
+            <chapter eId="chp_9">
+                <heading eId="chp_9__heading">COME VENGONO PROTETTI I DATI DELL'UTENTE</heading>
+                <paragraph eId="chp_9__para_1">
+                    <heading eId="chp_9__para_1__heading">Misure di sicurezza</heading>
+                    <content eId="chp_9__para_1__content">
+                        <p>Al fine di garantire un'esperienza di gioco protetta e sicura, sviluppiamo e implementiamo continuamente misure di sicurezza amministrative, tecniche e fisiche per proteggere i dati dell'utente da accessi non autorizzati o dalla loro perdita, uso improprio o alterazione.</p>
+                    </content>
+                </paragraph>
+                <paragraph eId="chp_9__para_2">
+                    <heading eId="chp_9__para_2__heading">Conservazione dei dati</heading>
+                    <content eId="chp_9__para_2__content">
+                        <p>Conserveremo i dati dell'utente finché il suo account sarà attivo o, ove necessario, per fornire i nostri Servizi. Potremmo, per esempio, rimuovere periodicamente l'identificazione degli account non utilizzati, nonché esaminare e rimuovere l'identificazione di dati non necessari.Non raccogliamo o sollecitiamo consapevolmente i dati personali relativi a, o messaggi pubblicitari basati sugli interessi mirati o diretti a, chiunque abbia un'età inferiore ai 13 anni né consentiamo consapevolmente a tali persone di utilizzare i nostri Servizi.</p>
+                    </content>
+                </paragraph>
+            </chapter>
+            <chapter eId="chp_10">
+                <heading eId="chp_10__heading">MINORI </heading>
+                <content eId="chp_10__content">
+                    <p>Proteggere la privacy dei 
+                        <role refersTo="#minor" eId="role_3">minori </role>online è molto importante per noi. In genere i nostri Servizi non si rivolgono a utenti minori di 13 anni (o dell'età stabilita dalle norme territoriali applicabili) e non raccolgono intenzionalmente dati personali dai minori, salvo nei casi indicati nel seguente paragrafo.Per i giochi che pur non rivolgendosi ai minori sono nondimeno suscettibili di esercitare un'attrattiva sugli stessi, adottiamo ulteriori misure al fine di limitare l'accesso ai Servizi in base all'età del giocatore. In relazione a tali Servizi, quando un giocatore indica di avere meno di 13 anni (o dell'età stabilita dalle norme territoriali applicabili) limiteremo il suo accesso ad alcune funzioni, come i social media, la chat e alcuni tipi di notifiche. Limitiamo altresì il trattamento dei dati personali a quanto strettamente necessario al supporto delle operazioni interne dei nostri Servizi.Si prega di notare che per alcuni dei nostri Servizi potremo adottare un limite di età più elevato (per esempio 16 anni) rispetto a quello indicato nei due paragrafi precedenti. In questo modo possiamo fornire un'esperienza di gioco sicura per i nostri giocatori e proteggere i giocatori giovani.I genitori o i tutori che desiderino esaminare i dati personali raccolti dai minori o che vogliano modificarli o eliminarli possono contattarci ai recapiti di cui in precedenza. Laddove venissimo a conoscenza di aver ricevuto dati personali da parte di un minore in maniera non conforme a quanto precede e fatto salvo il caso in cui fossimo soggetti all'obbligo giuridico di conservarli, provvederemo alla relativa eliminazione. Procederemo altresì alla cancellazione dell'account del minore e/o lo riconvertiremo, laddove possibile, all'esperienza destinata ai minorenni.
+                    </p>
+                </content>
+            </chapter>
+            <chapter eId="chp_11">
+                <heading eId="chp_11__heading">PER I SOGGETTI CHE RISIEDONO IN CALIFORNIA</heading>
+                <content eId="chp_11__content">
+                    <p/>
+                    <p>Si prega di visitare supercell.com/en/disclosure-california-residents per informazioni speciali concernenti i soggetti che risiedono in California.</p>
+                </content>
+            </chapter>
+        </mainBody>
+    </doc>
+</akomaNtoso>
