@@ -248,9 +248,12 @@
 <div id="slide10" class="slide">
 <div id="slide11" class="slide">
             <a-scene renderer="colorManagement: true"; fog="type: linear; color: #AFEEEE; far: 10;">
+                <a-entity id="leftHand" hand-tracking-controls="hand: left;"></a-entity>
+                <a-entity id="rightHand" hand-tracking-controls="hand: right;"></a-entity>
                 <a-assets>
                     <img id="floor" src="assets/floor.jpg">
                     <img id="sky" src="assets/sky.jpg">
+                    <a-mixin id="text" text="color: blue; width: 2, lineHeight: 60, align: center, baseline: top, wrapcount: 12" visible="false"></a-mixin>
                 </a-assets>
                 <a-plane material="src:assets/floor.jpg; repeat: 700 700; transparent: true;" height="500" width="500" rotation="-90 0 0"></a-plane>
                 <a-sky color="#AFEEEE"></a-sky>
@@ -559,7 +562,7 @@
                         <a href="#" onclick="multifunction()" class="button next">Home</a>
                     </div>
                 </a-entity>
-                <a-entity id="menu" class="screen menu" htmlembed="ppu:256" position="3.2 2.7 -4.476" rotation="0 -45 0">
+                <a-entity aknlink_log_component id="menu" class="screen menu" htmlembed="ppu:256" position="3.2 2.7 -4.476" rotation="0 -45 0">
                     <h2>Icone</h2>
                     <div class="metaLinkDiv" id="ControllerPanel" style="display: none;"><a class="metaLink"><img src="assets/Controller.png" width="120" height="120"><div>Data Controller</div></a></div>
                     <div class="metaLinkDiv" id="dataPersonalPanel" style="display: none;"><a class="metaLink"><img src="assets/dataPersonal.png" width="120" height="120"><div>Dati Personali</div></a></div>
@@ -579,7 +582,7 @@
                     </div>
                     <div class="metaLinkDiv" id="minorPanel" style="display: none;"><a class="metaLink"><img src="assets/minor.png" width="120" height="120"><div>Minori</div></a></div>
                     <div class="metaLinkDiv" id="subjectPanel" style="display: none;"><a class="metaLink"><img src="assets/subject.png" width="120" height="120"><div>Soggetti in California</div></a></div>
-                    <div class="metaLinkDivPersistent" id="AknImg" style="display: flex" onclick="AknLink()"><a class="metaLinkPersistent"><img src="assets/akomantoso.png" width="120" height="120"><div>Akoma Ntoso</div></a></div>
+                    <div class="metaLinkDivPersistent" id="AknImg" style="display: flex" onclick="AknLink_log()"><a class="metaLinkPersistent"><img src="assets/akomantoso.png" width="120" height="120"><div>Akoma Ntoso</div></a></div>
                 </a-entity>
                 <a-box plane_component position="0 1 -4" id="IconBox" visible="false"
                     animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
