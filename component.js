@@ -60,12 +60,14 @@ function AknLink() {
 };
 function AknLink_log() {
     var AKNText = AknLink()
+    var height = AKNText.innerHTML.split(/\r\n|\r|\n/).length * 0.37
     var show_akn=false;
     let akn_text = document.querySelector("#aknPlane")
     if(show_akn){
         akn_text.setAttribute("visible","false");
       }else{
-        akn_text.setAttribute("text", "align: left; width: 2; color: white; value:"+AKNText.innerHTML);
+        akn_text.setAttribute("height",height)
+        akn_text.setAttribute("text", "align: left; width: 2; value:"+AKNText.innerHTML);
         akn_text.setAttribute("visible","true");
       }
       show_akn=!show_akn;
