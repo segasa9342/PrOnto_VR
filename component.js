@@ -20,7 +20,7 @@ AFRAME.registerComponent('showbutton', {
     });
   }
 })
-AFRAME.registerComponent("plane_component", {
+AFRAME.registerComponent("boxshowplane", {
 init: function() {
   var show=false;
   this.el.addEventListener("click", (e) => {
@@ -28,6 +28,7 @@ init: function() {
     if(show){
         plane.setAttribute("visible","false");
       }else{
+        plane.emit("startanim");
         plane.setAttribute("visible","true");
       }
       show=!show;
@@ -60,14 +61,17 @@ function AknLink() {
 };
 function AknLink_log() {
     var AKNText = AknLink()
-    var height = AKNText.innerHTML.split(/\r\n|\r|\n/).length * 0.37
+    var height = AKNText.innerHTML.split(/\r\n|\r|\n/).length
     var show_akn=false;
-    let akn_text = document.querySelector("#aknPlane")
+    let akn_plane = document.querySelector("#aknPlane")
+    let akn_text = document.querySelector("#aknText")
     if(show_akn){
+        akn_plane.setAttribute("visible","false");
         akn_text.setAttribute("visible","false");
       }else{
-        akn_text.setAttribute("height",height)
-        akn_text.setAttribute("text", "align: left; width: 2; value:"+AKNText.innerHTML);
+        akn_plane.setAttribute("geometry", "width: 2.5; height: "+height*0.30)
+        akn_text.setAttribute("troika-text", "maxWidth:1.7; fontSize:0.08; value:"+AKNText.innerHTML);
+        akn_plane.setAttribute("visible","true");
         akn_text.setAttribute("visible","true");
       }
       show_akn=!show_akn;
@@ -77,6 +81,7 @@ function boxesdisappear() {
 document.querySelector('#aknPlane').setAttribute("visible","false");
 document.querySelectorAll('a-box').forEach( x=> x.setAttribute("visible","false"));
 document.querySelector('#aknPlane').setAttribute("visible","false");
+document.querySelector('#aknText').setAttribute("visible","false");
 };
 function showIcon(imageURL){
 Array.from(document.getElementsByClassName('metaLinkDiv')).forEach(container => container.style.display = 'none');

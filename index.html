@@ -10,6 +10,12 @@
     <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
     <script src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+    <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/default.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <script async src="component.js"> </script>
     <style>
     body{
@@ -581,13 +587,18 @@
                     <div class="metaLinkDiv" id="subjectPanel" style="display: none;"><a class="metaLink"><img src="assets/subject.png" width="120" height="120"><div>Soggetti in California</div></a></div>
                     <div class="metaLinkDivPersistent" id="AknImg" style="display: flex" onclick="AknLink_log()"><a class="metaLinkPersistent"><img src="assets/akomantoso.png" width="120" height="120"><div>Akoma Ntoso</div></a></div>
                 </a-entity>
-                <a-box plane_component position="0 1 -4" id="IconBox" visible="false"
+                <a-box boxshowplane position="0 1 -4" id="IconBox" visible="false"
                     animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
                     animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 5000; easing: linear; startEvents: startanim">
                 </a-box>
-                <a-entity>
-                    <a-plane id="aknPlane" material="transparent: true" height="3.2" width="2.8" position="4.5 2.7 -3" scale="1 1 1" rotation="0 -45 0" src="assets/Screen_2.png" visible="false"></a-plane>
+                <a-entity  geometry="primitive: plane" material="src: assets/Screen_2.png; transparent: true" id="aknPlane" position="4.5 2.7 -3" scale="1 1 1" rotation="0 -45 0" visible="false"></a-entity>
+                <a-entity  id="aknText" scale="1 1 1" rotation="0 -45 0" position="4.55 2.7 -2.9" visible="false"></a-entity>
+
+                <a-entity  geometry="primitive: plane" material="src: assets/Screen_2.png; transparent: true" id="infoPlane" position="1 2 -4" scale="1 1 1" rotation="0 0 0" visible="false"
+                    animation__rotation="property: rotation; from: 0 0 0; to: 0 -30 0; dur: 2500; easing: linear; startEvents: startanim"
+                    animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 2500; easing: linear; startEvents: startanim">
                 </a-entity>
+                <a-entity  id="infoText" scale="1 1 1" rotation="0 -45 0" position="4.55 2.7 -2.9" visible="false"></a-entity>
             </a-scene>
 </div>
 </div>
