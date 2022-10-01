@@ -40,6 +40,7 @@ function AknLink() {
     var slideID = fullUrl.split('#').pop();
     var slideID = slideID.replace("_", "__para_");
     var slideID = slideID.replace("slide", "chp_");
+    console.log(slideID)
     var request = new XMLHttpRequest();
     request.open("GET", "assets/privacy_policy.xml", false);
     request.send();
@@ -83,10 +84,11 @@ document.querySelectorAll('a-box').forEach( x=> x.setAttribute("visible","false"
 document.querySelector('#aknPlane').setAttribute("visible","false");
 document.querySelector('#aknText').setAttribute("visible","false");
 };
+
 function showIcon(imageURL){
 Array.from(document.getElementsByClassName('metaLinkDiv')).forEach(container => container.style.display = 'none');
 document.getElementById(imageURL).style.display = "inline";
-}
+};
 
 function multifunction(value) {
     boxesdisappear();
