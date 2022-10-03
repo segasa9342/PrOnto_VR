@@ -261,10 +261,10 @@
                 <a-plane material="src:assets/floor.jpg; repeat: 700 700; transparent: true;" height="500" width="500" rotation="-90 0 0"></a-plane>
                 <a-sky color="#AFEEEE"></a-sky>
                 <a-entity id="cameraRig" movement-controls="fly: true">
-                    <a-camera id="camera" look-controls wasd-controls position="0 3.2 0">
-                    </a-camera>
-                    <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
-                    <a-entity laser-controls raycaster="objects: .screen;"></a-entity>
+                    <a-camera id="camera" look-controls wasd-controls position="0 3.2 0"></a-camera>
+                    <a-entity id="mouseCursor" cursor="rayOrigin: mouse" ></a-entity>
+                    <a-entity laser-controls raycaster="objects: .link;"></a-entity>
+                    <a-entity cursor raycaster="objects: .clickable; showLine: true; far: 500"></a-entity>
                 </a-entity>
                 <a-entity id="menu" class="screen menu" htmlembed="ppu:256" position="-3.2 2.7 -4.476" rotation="0 45 0">
                     <h2>Menu</h2>
