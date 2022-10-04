@@ -13,6 +13,9 @@
     <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
     <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
     <script src="https://unpkg.com/aframe-thumb-controls-component@1.1.0/dist/aframe-thumb-controls-component.min.js"></script>
+    <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script>
+    <script src="https://gftruj.github.io/hand.tracking.controls.extras/dist/aframe-hand-tracking-controls-extras.js"></script>
+
 
     <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/default.min.css">
     <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
@@ -275,13 +278,13 @@
                     <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
                 </a-entity>
                 <!-- Basic movement and teleportation  -->
-                <a-entity id="cameraRigVR" movement-controls="constrainToNavMesh: true;" navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable" position="0 0 0" rotation="0 0 0">
+                <a-entity id="cameraRigVR" movement-controls="constrainToNavMesh: true;" navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable" position="28 3.4 -15.5" rotation="0 0 0">
                 <!-- camera -->
-                <a-entity id="head" camera="active: true" position="0 0 0" look-controls="pointerLockEnabled: true; reverseMouseDrag: true" ></a-entity>
+                <a-entity id="head" camera="active: true" position="28 3.4 -15.5" look-controls="pointerLockEnabled: true; reverseMouseDrag: true" ></a-entity>
                 <!-- Left Controller -->
-                <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #15ACCF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60" visible="true"></a-entity>
+                <a-entity id="leftHand" sphere-collider="objects: a-box" super-hands hand-controls="hand: left; handModelStyle: lowPoly; color: #15ACCF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60" visible="true" hand-tracking-extras></a-entity>
                 <!-- Right Controller -->
-                <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #15ACCF" laser-controls raycaster="showLine: true; far: 10; interval: 0; objects: .clickable, a-link;" line="color: #7cfc00; opacity: 0.5" visible="true"></a-entity>
+                <a-entity id="rightHand" sphere-collider="objects: a-box" super-hands hand-controls="hand: right; handModelStyle: lowPoly; color: #15ACCF" laser-controls raycaster="showLine: true; far: 10; interval: 0; objects: .clickable, a-link;" line="color: #7cfc00; opacity: 0.5" visible="true" hand-tracking-extras></a-entity>
                 </a-entity>
 
 
@@ -614,7 +617,7 @@
                     <div class="metaLinkDiv" id="subjectPanel" style="display: none;"><a class="metaLink"><img src="assets/subject.png" width="125" height="125"><div>Soggetti in California</div></a></div>
                     <div class="metaLinkDivPersistent" id="AknImg" style="display: block" onclick="AknLink_log()"><a class="metaLinkPersistent"><img src="assets/akomantoso.png" width="125" height="125"><div>Akoma Ntoso</div></a></div>
                 </a-entity>
-                <a-box boxshowplane position="28 1.2 -20.5" id="IconBox" visible="false"
+                <a-box hoverable grabbable stretchable draggable dropppable boxshowplane position="28 1.2 -20.5" id="IconBox" visible="false"
                     animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
                     animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 5000; easing: linear; startEvents: startanim">
                 </a-box>
