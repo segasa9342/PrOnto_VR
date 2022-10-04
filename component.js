@@ -94,7 +94,3 @@ function multifunction(value) {
     boxesdisappear();
     showIcon(value)
 };
-var hand = document.getElementById("left-hand");
-hand.addEventListener("hand-tracking-extras-ready", (evt) = {
-  var jointsAPI = evt.detail.data.jointsAPI;
-});
