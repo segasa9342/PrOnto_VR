@@ -1,0 +1,11 @@
+Model Information:
+* title:	SciFi-Showroom
+* source:	https://sketchfab.com/3d-models/scifi-showroom-32e278d543f24dd1a181d57b69d5ff68
+* author:	Polsaris (https://sketchfab.com/polsaris)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "SciFi-Showroom" (https://sketchfab.com/3d-models/scifi-showroom-32e278d543f24dd1a181d57b69d5ff68) by Polsaris (https://sketchfab.com/polsaris) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
