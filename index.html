@@ -272,14 +272,11 @@
                 </a-assets>
                 <a-plane material="src:assets/floor.jpg; repeat: 700 700; transparent: true;" height="500" width="500" rotation="-90 0 0"></a-plane>
                 <a-sky material="src:assets/sky_night.jpeg; repeat: 5 5"></a-sky>
-                <a-entity id="cameraRig" movement-controls="fly: true">
-                    <a-camera id="camera" look-controls wasd-controls position="28 3.4 -15.5"></a-camera>
-                    <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
-                </a-entity>
                 <!-- Basic movement and teleportation  -->
-                <a-entity id="cameraRigVR" movement-controls="constrainToNavMesh: true;" navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable" position="28 3.4 -15.5" rotation="0 0 0">
-                <!-- camera -->
-                <a-entity id="head" camera="active: true" position="28 3.4 -15.5" look-controls="pointerLockEnabled: true; reverseMouseDrag: true" ></a-entity>
+                <a-entity id="cameraRig" movement-controls="constrainToNavMesh: true;" navigator="cameraRig: #cameraRig; mouseCursor: #head; collisionEntities: .collision; ignoreEntities: .clickable" position="28 3.4 -15.5" rotation="0 0 0">
+                <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+                    <!-- camera -->
+                <a-entity id="head" camera="active: true" position="0 0 0" look-controls="pointerLockEnabled: true; reverseMouseDrag: true" ></a-entity>
                 <!-- Left Controller -->
                 <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #15ACCF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60" visible="true" hand-tracking-extras></a-entity>
                 <!-- Right Controller -->
