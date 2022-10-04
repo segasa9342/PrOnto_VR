@@ -31,7 +31,7 @@
     padding-bottom: 0.5cm;
     }
     .dark{
-      background-color: rgba(0,0,0,0.2);
+      background-color: rgba(0,0,0,0.4);
       border-radius:50px;
       background-repeat: no-repeat;
       background-position: bottom right;
@@ -41,6 +41,7 @@
       width: 1228px;
       height: 1228px;
       overflow: hidden;
+      color: lightgray;
     }
     .menu{
       width: 360px;
@@ -50,6 +51,7 @@
       background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Do not repeat the image */
       background-size: cover; /* Resize the background image to cover the entire container */
+      color: lightgray;
     }
     .menu ul{
       list-style-type: none;
@@ -111,23 +113,28 @@
       display: block;
       bottom: 91%;
       right: 5%
+      background-color: white
     }
     a.metaLink:hover{
       border: 1px solid #fff;
       background-color: #888;
     }
     a.metaLinkPersistent {
-      width: 95%;
+      width: 100%;
       border-radius: 20px;
       color: #fff;
       text-decoration: none;
       text-align: center;
-      position: absolute;
+      padding: 10px 0;
+      margin-bottom: 0px;
+      text-shadow: none;
+      display: block;
       bottom: 9%;
+      right: 5%
     }
     a.metaLinkPersistent:hover {
       border: 3px solid #fff;
-      background-color: #444;
+      background-color: #888;
     }
     .next,.prev{
       position: absolute;
@@ -253,20 +260,20 @@
 <div id="slide9" class="slide">
 <div id="slide10" class="slide">
 <div id="slide11" class="slide">
-            <a-scene renderer="colorManagement: true"; fog="type: linear; color: #AFEEEE; far: 10;">
+            <a-scene>
                 <a-assets>
                     <img id="floor" src="assets/floor.jpg">
-                    <img id="sky" src="assets/sky.jpg">
+                    <img id="sky" src="assets/sky_night.jpg">
+                    <a-asset-item id="showroom" src="assets/showroom/scene.gltf"></a-asset-item>
                 </a-assets>
                 <a-plane material="src:assets/floor.jpg; repeat: 700 700; transparent: true;" height="500" width="500" rotation="-90 0 0"></a-plane>
-                <a-sky color="#AFEEEE"></a-sky>
+                <a-sky material="src:assets/sky_night.jpeg; repeat: 5 5"></a-sky>
                 <a-entity id="cameraRig" movement-controls="fly: true">
-                    <a-camera id="camera" look-controls wasd-controls position="0 3.2 0"></a-camera>
-                    <a-entity id="mouseCursor" cursor="rayOrigin: mouse" ></a-entity>
-                    <a-entity laser-controls raycaster="objects: .link;"></a-entity>
-                    <a-entity cursor raycaster="objects: .clickable; showLine: true; far: 500"></a-entity>
+                    <a-camera id="camera" look-controls wasd-controls position="28 3.4 -15.5"></a-camera>
+                    <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
                 </a-entity>
-                <a-entity id="menu" class="screen menu" htmlembed="ppu:256" position="-3.2 2.7 -4.476" rotation="0 45 0">
+                <a-entity gltf-model="#showroom" position="0 0.1 0" rotation="0 45 0"></a-entity>
+                <a-entity id="menu" class="screen dark menu" htmlembed="ppu:256" position="24.5 3.2 -20" rotation="0 45 0">
                     <h2>Menu</h2>
                     <ul>
                         <li><a href="#" onclick="multifunction()" class="button">Normativa sulla Privacy</a></li>
@@ -282,7 +289,7 @@
                         <li><a href="#slide11" onclick="multifunction('subject)" class="button">Per i soggetti che risiedono in California</a></li>
                     </ul>
                 </a-entity>
-                <a-entity id="main" class="screen dark main" htmlembed="ppu:256" position="0 2.5 -5">
+                <a-entity id="main" class="screen dark main" htmlembed="ppu:256" position="28 3.2 -20.5">
 
                     <!--* Pagina 1 -->
                     <div id="page1">
@@ -571,34 +578,34 @@
                         <a href="#" onclick="multifunction()" class="button next">Home</a>
                     </div>
                 </a-entity>
-                <a-entity id="menu" class="screen menu" htmlembed="ppu:256" position="3.2 2.7 -4.476" rotation="0 -45 0">
+                <a-entity id="menu" class="screen dark menu" htmlembed="ppu:256" position="31.5 3.2 -20" rotation="0 -45 0">
                     <h2>Icone</h2>
-                    <div class="metaLinkDiv" id="ControllerPanel" style="display: none;"><a class="metaLink"><img src="assets/controller.png" width="120" height="120"><div>Data Controller</div></a></div>
-                    <div class="metaLinkDiv" id="dataPersonalPanel" style="display: none;"><a class="metaLink"><img src="assets/dataPersonal.png" width="120" height="120"><div>Dati Personali</div></a></div>
-                    <div class="metaLinkDiv" id="legalBasesPanel" style="display: none;"><a class="metaLink"><img src="assets/legalBases.png" width="120" height="120"><div>Base Giuridica del Trattamento</div></a></div>
-                    <div class="metaLinkDiv" id="thirdPartyPanel" style="display: none;"><a class="metaLink"><img src="assets/thirdParty.png" width="120" height="120"><div>Terze Parti</div></a></div>
-                    <div class="metaLinkDiv" id="processingTransferExtraEUPanel" style="display: none;"><a class="metaLink"><img src="assets/processingTransferExtraEU.png" width="120" height="120"><div>Trasferimenti dei Dati</div></a></div>
-                    <div class="metaLinkDiv" id="rightSubjectPanel" style="display: none;"><a class="metaLink"><img src="assets/rightSubject.png" width="120" height="120"><div>Diritti dell'Interessato</div></a></div>
+                    <div class="metaLinkDiv" id="ControllerPanel" style="display: none;"><a class="metaLink"><img src="assets/controller.png" width="125" height="125"><div>Data Controller</div></a></div>
+                    <div class="metaLinkDiv" id="dataPersonalPanel" style="display: none;"><a class="metaLink"><img src="assets/dataPersonal.png" width="125" height="125"><div>Dati Personali</div></a></div>
+                    <div class="metaLinkDiv" id="legalBasesPanel" style="display: none;"><a class="metaLink"><img src="assets/legalBases.png" width="125" height="125"><div>Base Giuridica del Trattamento</div></a></div>
+                    <div class="metaLinkDiv" id="thirdPartyPanel" style="display: none;"><a class="metaLink"><img src="assets/thirdParty.png" width="125" height="125"><div>Terze Parti</div></a></div>
+                    <div class="metaLinkDiv" id="processingTransferExtraEUPanel" style="display: none;"><a class="metaLink"><img src="assets/processingTransferExtraEU.png" width="125" height="125"><div>Trasferimenti dei Dati</div></a></div>
+                    <div class="metaLinkDiv" id="rightSubjectPanel" style="display: none;"><a class="metaLink"><img src="assets/rightSubject.png" width="125" height="125"><div>Diritti dell'Interessato</div></a></div>
                     <div class="metaLinkDiv" id="CookiePanel" style="display: none;">
-                        <a class="metaLink"><img src="assets/purposeSecurity.png" width="120" height="120"><div>Sicurezza</div></a>
-                        <a class="metaLink"><img src="assets/purposeMarketing.png" width="120" height="120"><div>Marketing</div></a>
-                        <a class="metaLink"><img src="assets/processingProfiling.png" width="120" height="120"><div>Profilazione</div></a>
-                        <a class="metaLink"><img src="assets/purposeService.png" width="120" height="120"><div>Offerta di un Servizio</div></a>
+                        <a class="metaLink"><img src="assets/purposeSecurity.png" width="125" height="125"><div>Sicurezza</div></a>
+                        <a class="metaLink"><img src="assets/purposeMarketing.png" width="125" height="125"><div>Marketing</div></a>
+                        <a class="metaLink"><img src="assets/processingProfiling.png" width="125" height="125"><div>Profilazione</div></a>
+                        <a class="metaLink"><img src="assets/purposeService.png" width="125" height="125"><div>Offerta di un Servizio</div></a>
                     </div>
                     <div class="metaLinkDiv" id="SecurityPanel" style="display: none;">
-                        <a class="metaLink"><img src="assets/processing.png" width="120" height="120"><div>Trattamento Sicuro</div></a>
-                        <a class="metaLink"><img src="assets/purposeSecurity.png" width="120" height="120"><div>Sicurezza</div></a>
+                        <a class="metaLink"><img src="assets/processing.png" width="125" height="125"><div>Trattamento Sicuro</div></a>
+                        <a class="metaLink"><img src="assets/purposeSecurity.png" width="125" height="125"><div>Sicurezza</div></a>
                     </div>
-                    <div class="metaLinkDiv" id="minorPanel" style="display: none;"><a class="metaLink"><img src="assets/minor.png" width="120" height="120"><div>Minori</div></a></div>
-                    <div class="metaLinkDiv" id="subjectPanel" style="display: none;"><a class="metaLink"><img src="assets/subject.png" width="120" height="120"><div>Soggetti in California</div></a></div>
-                    <div class="metaLinkDivPersistent" id="AknImg" style="display: flex" onclick="AknLink_log()"><a class="metaLinkPersistent"><img src="assets/akomantoso.png" width="120" height="120"><div>Akoma Ntoso</div></a></div>
+                    <div class="metaLinkDiv" id="minorPanel" style="display: none;"><a class="metaLink"><img src="assets/minor.png" width="125" height="125"><div>Minori</div></a></div>
+                    <div class="metaLinkDiv" id="subjectPanel" style="display: none;"><a class="metaLink"><img src="assets/subject.png" width="125" height="125"><div>Soggetti in California</div></a></div>
+                    <div class="metaLinkDivPersistent" id="AknImg" style="display: block" onclick="AknLink_log()"><a class="metaLinkPersistent"><img src="assets/akomantoso.png" width="125" height="125"><div>Akoma Ntoso</div></a></div>
                 </a-entity>
-                <a-box boxshowplane position="0 1 -4" id="IconBox" visible="false"
+                <a-box boxshowplane position="28 1.2 -20.5" id="IconBox" visible="false"
                     animation__rotation="property: rotation; from: 0 0 0; to: 0 180 0; dur: 5000; easing: linear; startEvents: startanim"
                     animation__scale="property: scale; from: 0.1 0.1 0.1; to: 0.8 0.8 0.8; dur: 5000; easing: linear; startEvents: startanim">
                 </a-box>
-                <a-entity  geometry="primitive: plane" material="src: assets/Screen_2.png; transparent: true" id="aknPlane" position="4.5 2.7 -3" scale="1 1 1" rotation="0 -45 0" visible="false"></a-entity>
-                <a-entity  id="aknText" scale="1 1 1" rotation="0 -45 0" position="4.55 2.7 -2.9" visible="false"></a-entity>
+                <a-entity  geometry="primitive: plane" material="src: assets/Screen_2.png; transparent: true" id="aknPlane" position="33.5 3.2 -18.5" scale="1 1 1" rotation="0 -45 0" visible="false"></a-entity>
+                <a-entity  id="aknText" scale="1 1 1" rotation="0 -45 0" position="33.5 3.2 -18.4" visible="false"></a-entity>
 
                 <a-entity  geometry="primitive: plane" material="src: assets/Screen_2.png; transparent: true" id="infoPlane" position="1 2 -4" scale="1 1 1" rotation="0 0 0" visible="false"
                     animation__rotation="property: rotation; from: 0 0 0; to: 0 -30 0; dur: 2500; easing: linear; startEvents: startanim"
