@@ -15,7 +15,6 @@
     <script src="https://unpkg.com/aframe-thumb-controls-component@1.1.0/dist/aframe-thumb-controls-component.min.js"></script>
     <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script>
 
-
     <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/default.min.css">
     <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
@@ -273,16 +272,14 @@
                 <a-plane material="src:assets/floor.jpg; repeat: 700 700; transparent: true;" height="500" width="500" rotation="-90 0 0"></a-plane>
                 <a-sky material="src:assets/sky_night.jpeg; repeat: 5 5"></a-sky>
                 <!-- Basic movement and teleportation  -->
-                <a-entity id="cameraRig" movement-controls="constrainToNavMesh: true;" navigator="cameraRig: #cameraRig; mouseCursor: #head; collisionEntities: .collision; ignoreEntities: .clickable" position="28 3.4 -15.5" rotation="0 0 0">
+                <a-entity id="cameraRig" movement-controls="constrainToNavMesh: true;" navigator="cameraRig: #cameraRig; mouseCursor: #head" position="28 3.4 -15.5" rotation="0 0 0">
                 <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
                     <!-- camera -->
                 <a-entity id="head" camera="active: true" position="0 0 0" look-controls="pointerLockEnabled: false; reverseMouseDrag: false" ></a-entity>
                 <!-- Left Controller -->
-                <a-entity id="leftHandCtrl" hand-controls="hand: left; handModelStyle: lowPoly; color: #15ACCF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60" visible="true" hand-tracking-extras></a-entity>
+                <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #15ACCF" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; curveShootingSpeed: 18; landingMaxAngle: 60" visible="true" hand-tracking-extras></a-entity>
                 <!-- Right Controller -->
-                <a-entity id="rightHandCtrl" hand-controls="hand: right; handModelStyle: lowPoly; color: #15ACCF" laser-controls raycaster="showLine: true; far: 10; interval: 0; objects: a.ico_button, a.button, .menu, .next, .prev;" line="color: #7cfc00; opacity: 0.5" visible="true" hand-tracking-extras></a-entity>
-                <a-entity id="leftHand" hand-tracking-controls="hand: left;"></a-entity>
-                <a-entity id="rightHand" hand-tracking-controls="hand: right;"></a-entity>
+                <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #15ACCF" laser-controls raycaster="showLine: true; far: 10; interval: 0; objects: .menu, .dark, .main, a.ico_button, .ico_button, a.button, .menu, .next, .prev;" line="color: #7cfc00; opacity: 0.5" visible="true" hand-tracking-extras></a-entity>
                 </a-entity>
 
 
